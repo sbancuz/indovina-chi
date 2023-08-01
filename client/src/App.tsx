@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import io from 'socket.io-client';
 
-const sock = io('http://localhost:3001');
-
+// const sock = io('http://localhost:3001');
+const sock = io('https://indovina-chi-29464.web.app:3001', { transports: ['websockets'] });
 interface Player {
   nick: string;
   identity: string;
